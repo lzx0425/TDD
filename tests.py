@@ -21,6 +21,11 @@ class TestCase(unittest.TestCase):
 	def test_5_wrong_pwd_no_lower(self):
 		the_pwd = "ILOVEYOU3000!"
 		self.assertFalse(check_pwd(the_pwd),msg="no lower case")
+	
+	def test_6_wrong_pwd_no_upper(self):
+		the_pwd = "iloveyou3000!"
+		self.assertFalse(check_pwd(the_pwd),msg="no upper case")
+		self.assertTrue(check_pwd(the_pwd),msg="no upper case")
 
 
 if __name__ == '__main__':
