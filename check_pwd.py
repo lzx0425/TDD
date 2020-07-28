@@ -2,7 +2,10 @@ def char_check(pwd):
 	special_char = {'~','`','!','@','#','$','%','^','&','*','(',')','_','+','-','='}
 	if not any(char in special_char for char in pwd):
 		return False
-
+	if not any(char.islower() for char in pwd):
+		return False
+	if not any(char.isupper() for char in pwd):
+		return False
 	return True
 
 def check_pwd(pwd_input):
