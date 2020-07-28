@@ -29,6 +29,11 @@ class TestCase(unittest.TestCase):
 	def test_7_no_digit(self):
 		the_pwd = "Iloveyou!"
 		self.assertFalse(check_pwd(the_pwd),msg="no digit")
+	
+	def test_8_no_special_case(self):
+		the_pwd = "Iloveyou3000"
+		self.assertFalse(check_pwd(the_pwd),msg="no special case")
+		self.assertTrue(check_pwd(the_pwd),msg="no special case")
 
 
 if __name__ == '__main__':
