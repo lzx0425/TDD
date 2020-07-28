@@ -6,7 +6,7 @@ class TestCase(unittest.TestCase):
 		the_pwd = ""
 		self.assertFalse(check_pwd(the_pwd),msg="this is an empty password")
 	
-	def test2(self):
+	def test2_correct_pwd(self):
 		the_pwd = "Iloveyou3000!"
 		self.assertTrue(check_pwd(the_pwd),msg="this is the correct password")
 
@@ -25,6 +25,14 @@ class TestCase(unittest.TestCase):
 	def test_6_wrong_pwd_no_upper(self):
 		the_pwd = "iloveyou3000!"
 		self.assertFalse(check_pwd(the_pwd),msg="no upper case")
+
+	def test_7_no_digit(self):
+		the_pwd = "Iloveyou!"
+		self.assertFalse(check_pwd(the_pwd),msg="no digit")
+
+	def test_8_no_special_case(self):
+		the_pwd = "Iloveyou3000"
+		self.assertFalse(check_pwd(the_pwd),msg="no special case")
 
 if __name__ == '__main__':
 	unittest.main()
