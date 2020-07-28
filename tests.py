@@ -29,7 +29,6 @@ class TestCase(unittest.TestCase):
 	def test_7_no_digit(self):
 		the_pwd = "Iloveyou!"
 		self.assertFalse(check_pwd(the_pwd),msg="no digit")
-		self.assertTrue(check_pwd(the_pwd),msg="no digit")
 
 
 if __name__ == '__main__':
